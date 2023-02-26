@@ -1,0 +1,22 @@
+{
+  "name": "portfoliowebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Savenhart/PortfolioWebSite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Savenhart/PortfolioWebSite/issues"
+  },
+  "homepage": "https://github.com/Savenhart/PortfolioWebSite#readme",
+  "dependencies": {
+    "@angular/cli": "^15.2.0"
+  }
+}
