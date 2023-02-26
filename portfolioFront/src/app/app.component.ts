@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolioFront';
   items = [
-    { title: 'Slide 1' },
-    { title: 'Slide 2' },
-    { title: 'Slide 3' },
+    { title: 'Slide 1',
+      src: '../assets/test 1.JPG',
+      text: 'Potit chat !' },
+    { title: 'Slide 2',
+    src: '../assets/test 2.jpg',
+    text: 'Gros dodo !'  },
+    { title: 'Slide 3',
+    src: '../assets/test 3.jpg',
+    text: 'Bleep !'  },
   ]
 }

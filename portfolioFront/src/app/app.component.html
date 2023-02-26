@@ -1,7 +1,9 @@
 <app-carousel>
   <ng-container *ngFor="let item of items;">
     <ng-container *appCarouselItem>
-      <div class="item">{{item.title}}</div>
+      <div class="itemText">{{item.title}}</div>
+      <img class="item" [src]=item.src [alt] = item.title>
+      <div class="itemText">{{item.text}} Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum tempora perspiciatis nesciunt deleniti repudiandae libero praesentium ducimus, excepturi rem nobis est dicta iste accusamus sapiente recusandae, dignissimos vero ratione distinctio?</div>
     </ng-container>
   </ng-container>
 </app-carousel>
