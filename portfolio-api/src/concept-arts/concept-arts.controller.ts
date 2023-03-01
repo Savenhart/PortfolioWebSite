@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ConceptArtsService } from './concept-arts.service';
-import { ConceptArt } from './model/concept-art';
+import { ConceptArt } from './model/concept-art.entity';
 
 @Controller('conceptArts')
 export class ConceptArtsController {
@@ -17,7 +17,7 @@ export class ConceptArtsController {
   }
 
   @Get(':id')
-  find(@Param() params): string {
-    return `The number is ${params.id}`;
+  async find(@Param() params): Promise<ConceptArt> {
+    return this.conceptArtsService.find(params.id);
   }
 }

@@ -1,4 +1,4 @@
-import { ConceptArt } from './concept-art';
+import { ConceptArt } from './concept-art.entity';
 
 describe('ConceptArt', () => {
   it('should be defined', () => {
