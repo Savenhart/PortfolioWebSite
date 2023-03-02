@@ -9,7 +9,7 @@ import {
   ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { CarouselItemDirective } from '../carousel-item.directive';
+import { CarouselItemDirective } from '../../directives/carousel-item/carousel-item.directive';
 import {
   AnimationBuilder,
   AnimationFactory,
@@ -19,9 +19,9 @@ import {
 } from '@angular/animations';
 
 @Directive({
-  selector: '.carousel-item',
+  selector: '.my-carousel-item',
 })
-export class CarouselItemElement { }
+export class CarouselItemElement {}
 
 @Component({
   selector: 'app-carousel',
@@ -29,14 +29,17 @@ export class CarouselItemElement { }
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements AfterViewInit {
-  @ContentChildren(CarouselItemDirective) items: QueryList<CarouselItemDirective> = {} as QueryList<CarouselItemDirective>;
-  @ViewChildren(CarouselItemElement, { read: ElementRef }) private itemsElements: QueryList<ElementRef> = {} as QueryList<ElementRef>;
+  @ContentChildren(CarouselItemDirective)
+  items: QueryList<CarouselItemDirective> =
+    {} as QueryList<CarouselItemDirective>;
+  @ViewChildren(CarouselItemElement, { read: ElementRef })
+  private itemsElements: QueryList<ElementRef> = {} as QueryList<ElementRef>;
   carouselWrapperStyle = {};
 
   @ViewChild('carousel') private carousel: ElementRef = {} as ElementRef;
   @Input() timing = '250ms ease-in';
   @Input() showControls = true;
-  
+
   private player: AnimationPlayer = {} as AnimationPlayer;
   private itemWidth: number = 0;
   private currentSlide: number = 0;
@@ -72,7 +75,7 @@ export class CarouselComponent implements AfterViewInit {
     this.player.play();
   }
 
-  constructor(private builder: AnimationBuilder) { }
+  constructor(private builder: AnimationBuilder) {}
 
   ngAfterViewInit(): void {
     this.itemWidth =

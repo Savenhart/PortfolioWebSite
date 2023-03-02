@@ -1,4 +1,4 @@
-.carousel-wrapper {
+.my-carousel-wrapper {
   overflow: hidden;
 }
 .ul {
@@ -7,7 +7,7 @@
   padding: 0;
   width: 6000px;
 }
-.carousel-inner {
+.my-carousel-inner {
   display: flex;
   list-style-type: none;
   padding-inline-start: 0px;
