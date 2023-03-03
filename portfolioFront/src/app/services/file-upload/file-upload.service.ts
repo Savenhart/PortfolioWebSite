@@ -1,12 +1,12 @@
 import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environnements/environnement';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FileUploadService {
-  private baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class FileUploadService {
 
     formData.append('file', file);
 
-    const req = new HttpRequest('POST', `${this.baseUrl}/upload`, formData, {
+    const req = new HttpRequest('POST', `${environment.apiUrl}/conceptArts`, formData, {
       reportProgress: true,
       responseType: 'json',
     });
@@ -24,6 +24,6 @@ export class FileUploadService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/file`);
+    return this.http.get(`${environment.apiUrl}/file`);
   }
 }
