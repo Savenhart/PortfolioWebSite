@@ -1,0 +1,14 @@
+.my-carousel-wrapper {
+  overflow: hidden;
+}
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 6000px;
+}
+.my-carousel-inner {
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
