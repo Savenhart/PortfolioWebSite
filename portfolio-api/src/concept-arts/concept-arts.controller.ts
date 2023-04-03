@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { ConceptArtsService } from './concept-arts.service';
 import { ConceptArt } from './model/concept-art.entity';
 
@@ -20,4 +20,14 @@ export class ConceptArtsController {
   async find(@Param() params): Promise<ConceptArt> {
     return this.conceptArtsService.find(params.id);
   }
+
+  @Delete(':id')
+  async remove(@Param() params): Promise<any> {
+    return this.conceptArtsService.remove(params.id);
+  }
+
+  // @Put('id')
+  // async update(@Param() params): Promise<ConceptArt> {
+  //   return this.conceptArtsService.update(params.id);
+  // }
 }

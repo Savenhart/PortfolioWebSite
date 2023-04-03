@@ -23,4 +23,13 @@ export class ConceptArtsService {
   find(id: number): Promise<ConceptArt> {
     return this.conceptArtRepository.findOneBy({ id });
   }
+
+  remove(id: number): Promise<any> {
+    return this.conceptArtRepository.delete({id});
+  }
+
+  // update(id: number): Promise<ConceptArt> {
+  //   return this.conceptArtRepository.update(id, true);
+  // }
+
 }
