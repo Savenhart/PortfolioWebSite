@@ -8,9 +8,8 @@ describe('BlockTextImageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlockTextImageComponent ]
-    })
-    .compileComponents();
+      declarations: [BlockTextImageComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BlockTextImageComponent);
     component = fixture.componentInstance;

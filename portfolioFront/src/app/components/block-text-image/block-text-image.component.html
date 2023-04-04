@@ -1,9 +1,1 @@
-<div *ngFor="let listBlock of listBlocks">
-  <div class="container">
-    <div class="row">
-      <div class="col-1">{{ listBlock.id }}</div>
-      <div class="col-4">{{ listBlock.text }}</div>
-      <img class="{{ listBlock.side }} col-2" [src]="listBlock.image" />
-    </div>
-  </div>
-</div>
+<div #blockTextImage></div>
