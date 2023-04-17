@@ -13,3 +13,9 @@
   width: 300px;
   text-align: center;
 }
+
+body {
+  background-image: url(./assets/city-5848267_1280.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
