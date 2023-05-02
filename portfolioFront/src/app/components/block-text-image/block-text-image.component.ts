@@ -49,12 +49,11 @@ export class BlockTextImageComponent implements AfterViewInit {
       const divRow: HTMLDivElement = this.renderer.createElement('div');
       divRow.className = 'row';
 
-      divID.innerHTML = `${list.id}`;
-      divID.className = 'col-1';
       divText.innerHTML = list.text;
-      divText.className = 'col-4';
+      divText.className = 'col-9';
       img.src = list.image;
-      img.className = 'col-2';
+      img.className = 'col-3';
+
       console.log(index % 2 === 0);
       if (index % 2 === 0) {
         console.log(`${list.id}`);
