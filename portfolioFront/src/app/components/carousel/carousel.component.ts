@@ -19,9 +19,10 @@ import {
 } from '@angular/animations';
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '.my-carousel-item',
 })
-export class CarouselItemElement {}
+export class CarouselItemElementDirective {}
 
 @Component({
   selector: 'app-carousel',
@@ -32,7 +33,7 @@ export class CarouselComponent implements AfterViewInit {
   @ContentChildren(CarouselItemDirective)
   items: QueryList<CarouselItemDirective> =
     {} as QueryList<CarouselItemDirective>;
-  @ViewChildren(CarouselItemElement, { read: ElementRef })
+  @ViewChildren(CarouselItemElementDirective, { read: ElementRef })
   private itemsElements: QueryList<ElementRef> = {} as QueryList<ElementRef>;
   carouselWrapperStyle = {};
 
@@ -41,8 +42,8 @@ export class CarouselComponent implements AfterViewInit {
   @Input() showControls = true;
 
   private player: AnimationPlayer = {} as AnimationPlayer;
-  private itemWidth: number = 0;
-  private currentSlide: number = 0;
+  private itemWidth = 0;
+  private currentSlide = 0;
 
   next() {
     if (this.currentSlide + 1 === this.items.length) return;
