@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'VCR_OSD';
+  src: url('../src/assets/fonts/VCR_OSD_MONO_1.001.ttf');
+}
+
+.main {
+  margin-top: 70px;
+}
+
 .item {
   padding: 0;
   width: 300px;
@@ -18,4 +27,11 @@ body {
   background-image: url(./assets/city-5848267_1280.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'VCR_OSD';
+  font-size: larger;
+  color: #fff;
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; */
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
 }

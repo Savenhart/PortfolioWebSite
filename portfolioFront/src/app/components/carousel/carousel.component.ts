@@ -46,7 +46,7 @@ export class CarouselComponent implements AfterViewInit {
   private currentSlide = 0;
 
   next() {
-    if (this.currentSlide + 1 === this.items.length) return;
+    if (this.currentSlide + 1 === this.items.length) this.currentSlide = -1;
 
     this.currentSlide = (this.currentSlide + 1) % this.items.length;
 
@@ -61,7 +61,7 @@ export class CarouselComponent implements AfterViewInit {
   }
 
   prev() {
-    if (this.currentSlide === 0) return;
+    if (this.currentSlide === 0) this.currentSlide = this.items.length;
 
     this.currentSlide =
       (this.currentSlide - 1 + this.items.length) % this.items.length;
