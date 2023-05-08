@@ -33,7 +33,7 @@ export class BlockTextImageComponent implements AfterViewInit {
       divRow.className = 'row spaceDiv';
 
       divText.innerHTML = list.text;
-      divText.className = 'col-9 borderText';
+      divText.className = 'col-9 borderText blockHeight';
       img.src = list.image;
       img.className = 'col-3';
 
