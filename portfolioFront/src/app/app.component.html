@@ -1,26 +1,34 @@
+<video autoplay muted loop id="myVideo">
+  <source src="../assets/0001-0120.mp4" type="video/mp4" />
+</video>
 <app-header></app-header>
-<div class="main">
-  <div class="row">
-    <div class="col-8">
-      <app-block-text-image></app-block-text-image>
-    </div>
+<!-- <app-category-by-image></app-category-by-image> -->
+<div class="main container">
+  <div *ngFor="let name of categoryName; index as i">
+    <h1 id="{{ name }}" class="anchor">{{ name }}</h1>
+    <div class="row">
+      <div class="col-8 textImage-sm">
+        <app-block-text-image
+          [listBlocks]="blockTextData[i]"></app-block-text-image>
+      </div>
 
-    <div class="col-4">
-      <app-carousel class="centered">
-        <ng-container *ngFor="let item of items">
-          <ng-container *appCarouselItem>
-            <div class="itemText">{{ item.title }}</div>
-            <img class="item" [src]="item.src" [alt]="item.title" />
-            <div class="itemText">
-              {{ item.text }}
-            </div>
+      <div class="col-4 carousel-sm">
+        <app-carousel class="centered">
+          <ng-container *ngFor="let item of items[i]">
+            <ng-container *appCarouselItem>
+              <div class="itemText">{{ item.title }}</div>
+              <img class="item" [src]="item.src" [alt]="item.title" />
+              <div class="itemText">
+                {{ item.text }}
+              </div>
+            </ng-container>
           </ng-container>
-        </ng-container>
-      </app-carousel>
-    </div>
+        </app-carousel>
+      </div>
 
-    <!-- <div class="container" style="width: 500px">
+      <!-- <div class="container" style="width: 500px">
       <app-image-upload></app-image-upload>
     </div> -->
+    </div>
   </div>
 </div>

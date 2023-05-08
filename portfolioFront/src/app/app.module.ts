@@ -12,6 +12,7 @@ import { CarouselItemDirective } from './directives/carousel-item/carousel-item.
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { BlockTextImageComponent } from './components/block-text-image/block-text-image.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CategoryByImageComponent } from './components/category-by-image/category-by-image.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
     ImageUploadComponent,
     BlockTextImageComponent,
     HeaderComponent,
+    CategoryByImageComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, HttpClientModule],
   providers: [],

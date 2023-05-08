@@ -1,0 +1,9 @@
+#blockImgCat {
+    padding-top: 80px;
+}
+
+.imgCat {
+    padding: 0;
+    height: 100%;
+    overflow: visible;
+}
